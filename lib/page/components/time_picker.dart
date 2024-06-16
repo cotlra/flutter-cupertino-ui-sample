@@ -28,7 +28,7 @@ class _TimePickerPageState extends State<TimePickerPage> {
               onPressed: () {
                 DisplayCupertinoPicker.showPicker(context, _timePicker());
               },
-              child: const Text('Cupertino Timer Picker'),
+              child: const Text('Show CupertinoTimerPicker'),
             ),
           ],
         )),

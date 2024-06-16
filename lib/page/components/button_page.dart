@@ -18,9 +18,19 @@ class _ButtonPageState extends State<ButtonPage> {
       ),
       child: SafeArea(
         child: Center(
-          child: CupertinoButton(
-            onPressed: () {},
-            child: const Text('Cupertino Button'),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CupertinoButton(
+                onPressed: () {},
+                child: const Text('CupertinoButton'),
+              ),
+              const SizedBox(height: 16),
+              CupertinoButton.filled(
+                onPressed: () {},
+                child: const Text('CupertinoButton'),
+              ),
+            ],
           ),
         ),
       ),

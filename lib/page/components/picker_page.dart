@@ -1,4 +1,3 @@
-import 'package:cupertino_ui_sample/const/style_consts.dart';
 import 'package:cupertino_ui_sample/utils/cupertino_picker_display.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -30,7 +29,7 @@ class _PickerPageState extends State<PickerPage> {
               onPressed: () {
                 DisplayCupertinoPicker.showPicker(context, _picker());
               },
-              child: const Text('Cupertino Picker'),
+              child: const Text('Show CupertinoPicker'),
             ),
           ],
         )),
@@ -40,7 +39,7 @@ class _PickerPageState extends State<PickerPage> {
 
   Widget _picker() {
     return CupertinoPicker(
-      itemExtent: StyleConsts.value32,
+      itemExtent: 32,
       onSelectedItemChanged: (int value) {
         setState(() {
           _value = value;

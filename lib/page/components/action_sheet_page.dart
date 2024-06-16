@@ -10,6 +10,7 @@ class ActionSheetPage extends StatefulWidget {
 }
 
 class _ActionSheetPageState extends State<ActionSheetPage> {
+  String? _selectedAction;
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -18,16 +19,26 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
       ),
       child: SafeArea(
         child: Center(
-          child: CupertinoButton(
-            onPressed: () async {
-              String? action = await showCupertinoModalPopup<String>(
-                context: context,
-                builder: (BuildContext context) {
-                  return _actionSheet();
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(_selectedAction ?? '-'),
+              const SizedBox(height: 16),
+              CupertinoButton(
+                onPressed: () async {
+                  final action = await showCupertinoModalPopup<String>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return _actionSheet();
+                    },
+                  );
+                  setState(() {
+                    _selectedAction = action;
+                  });
                 },
-              );
-            },
-            child: const Text('Cupertino Action Sheet'),
+                child: const Text('Show CupertinoActionSheet'),
+              ),
+            ],
           ),
         ),
       ),
@@ -45,14 +56,14 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
 
   Widget _actionSheet() {
     return CupertinoActionSheet(
-      title: const Text('タイトル'),
-      message: const Text('メッセージ'),
+      title: const Text('CupertinoActionSheet'),
+      message: const Text('This is CupertinoActionSheet.'),
       actions: [
-        _action(value: 'action1', label: 'アクション1'),
-        _action(value: 'action2', label: 'アクション2'),
-        _action(value: 'action3', label: 'アクション3'),
+        _action(value: 'Action 1', label: 'Action 1'),
+        _action(value: 'Action 2', label: 'Action 2'),
+        _action(value: 'Action 3', label: 'Action 3'),
       ],
-      cancelButton: _action(value: 'cancel', label: 'キャンセル'),
+      cancelButton: _action(value: 'Cancel', label: 'Cancel'),
     );
   }
 }

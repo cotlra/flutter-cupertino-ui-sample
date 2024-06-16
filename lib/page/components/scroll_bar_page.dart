@@ -22,7 +22,7 @@ class _ScrollBarPageState extends State<ScrollBarPage> {
           child: ListView.builder(
             itemCount: 50,
             itemBuilder: (BuildContext context, int index) {
-              return CupertinoListTile(title: Text('Item$index'));
+              return CupertinoListTile(title: Text('Item $index'));
             },
           ),
         ),

@@ -21,7 +21,7 @@ class _ListTilePageState extends State<ListTilePage> {
           itemCount: 10,
           itemBuilder: (BuildContext context, int index) {
             return CupertinoListTile(
-              title: Text('List Tile Title$index'),
+              title: Text('List Tile Title $index'),
               subtitle: const Text('Subtitle'),
               leading: const Icon(CupertinoIcons.person_alt_circle),
               trailing: const Icon(CupertinoIcons.star),

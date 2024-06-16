@@ -33,7 +33,7 @@ class _ContextMenuPageState extends State<ContextMenuPage> {
                 isDestructiveAction: true,
               ),
             ],
-            child: Icon(CupertinoIcons.app),
+            child: const Icon(CupertinoIcons.app),
           ),
         ),
       ),

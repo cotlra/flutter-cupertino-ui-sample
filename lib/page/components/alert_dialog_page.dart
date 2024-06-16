@@ -26,7 +26,7 @@ class _AlertDialogPageState extends State<AlertDialogPage> {
                     return _dialog();
                   });
             },
-            child: const Text('Cupertino Alert Dialog'),
+            child: const Text('Show CupertinoAlertDialog'),
           ),
         ),
       ),
@@ -35,8 +35,8 @@ class _AlertDialogPageState extends State<AlertDialogPage> {
 
   Widget _dialog() {
     return CupertinoAlertDialog(
-      title: const Text('タイトル'),
-      content: const Text('これはCupertino Alert Dialogです。'),
+      title: const Text('CupertinoAlertDialog'),
+      content: const Text('This is CupertinoAlertDialog.'),
       actions: [
         _action(value: 'Cancel', label: 'Cancel'),
         _action(value: 'OK', label: 'OK'),

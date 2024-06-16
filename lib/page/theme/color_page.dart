@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../const/style_consts.dart';
-
 class ColorPage extends StatefulWidget {
   const ColorPage({super.key, required this.title});
 
@@ -23,66 +21,66 @@ class _ColorPageState extends State<ColorPage> {
       child: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: StyleConsts.padding16,
+            padding: const EdgeInsets.all(16),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 _labelColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _systemBackgroundColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _backgroundGreyColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _systemFillColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _systemGroupBackgroundColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _activeColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _systemColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _systemGreyColors(),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
                 _section(
                   children: [
                     _colorContainer(
                       title: 'Black',
-                      backgroungColor: CupertinoColors.black,
+                      backgroundColor: CupertinoColors.black,
                       textColor: CupertinoColors.systemBackground,
                     ),
                     _colorContainer(
                       title: 'White',
-                      backgroungColor: CupertinoColors.white,
+                      backgroundColor: CupertinoColors.white,
                       textColor: CupertinoColors.label,
                     ),
                     _colorContainer(
                       title: 'Link',
-                      backgroungColor: CupertinoColors.link,
+                      backgroundColor: CupertinoColors.link,
                       textColor: CupertinoColors.label,
                     ),
                     _colorContainer(
                       title: 'Placeholder Text',
-                      backgroungColor: CupertinoColors.placeholderText,
+                      backgroundColor: CupertinoColors.placeholderText,
                       textColor: CupertinoColors.label,
                     ),
                     _colorContainer(
                       title: 'Separator',
-                      backgroungColor: CupertinoColors.separator,
+                      backgroundColor: CupertinoColors.separator,
                       textColor: CupertinoColors.label,
                     ),
                     _colorContainer(
                       title: 'Opaque Separator',
-                      backgroungColor: CupertinoColors.opaqueSeparator,
+                      backgroundColor: CupertinoColors.opaqueSeparator,
                       textColor: CupertinoColors.label,
                     ),
                     _colorContainer(
                       title: 'Destructive Red',
-                      backgroungColor: CupertinoColors.destructiveRed,
+                      backgroundColor: CupertinoColors.destructiveRed,
                       textColor: CupertinoColors.label,
                     ),
                   ],
                 ),
-                StyleConsts.sizedBoxH16,
+                const SizedBox(height: 16),
               ],
             ),
           ),
@@ -96,22 +94,22 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'Label',
-          backgroungColor: CupertinoColors.label,
+          backgroundColor: CupertinoColors.label,
           textColor: CupertinoColors.white,
         ),
         _colorContainer(
           title: 'Secondary Label',
-          backgroungColor: CupertinoColors.secondaryLabel,
+          backgroundColor: CupertinoColors.secondaryLabel,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Tertiary Label',
-          backgroungColor: CupertinoColors.tertiaryLabel,
+          backgroundColor: CupertinoColors.tertiaryLabel,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Quaternary Label',
-          backgroungColor: CupertinoColors.quaternaryLabel,
+          backgroundColor: CupertinoColors.quaternaryLabel,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -123,17 +121,17 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'System Background',
-          backgroungColor: CupertinoColors.systemBackground,
+          backgroundColor: CupertinoColors.systemBackground,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Secondary System Background',
-          backgroungColor: CupertinoColors.secondarySystemBackground,
+          backgroundColor: CupertinoColors.secondarySystemBackground,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Tertiary System Background',
-          backgroungColor: CupertinoColors.tertiarySystemBackground,
+          backgroundColor: CupertinoColors.tertiarySystemBackground,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -145,17 +143,17 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'Extra Light Background Gray',
-          backgroungColor: CupertinoColors.extraLightBackgroundGray,
+          backgroundColor: CupertinoColors.extraLightBackgroundGray,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Light Background Gray',
-          backgroungColor: CupertinoColors.lightBackgroundGray,
+          backgroundColor: CupertinoColors.lightBackgroundGray,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Dark Background Gray',
-          backgroungColor: CupertinoColors.darkBackgroundGray,
+          backgroundColor: CupertinoColors.darkBackgroundGray,
           textColor: CupertinoColors.white,
         ),
       ],
@@ -167,22 +165,22 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'System Fill',
-          backgroungColor: CupertinoColors.systemFill,
+          backgroundColor: CupertinoColors.systemFill,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Secondary System Fill',
-          backgroungColor: CupertinoColors.secondarySystemFill,
+          backgroundColor: CupertinoColors.secondarySystemFill,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Tertiary System Fill',
-          backgroungColor: CupertinoColors.tertiarySystemFill,
+          backgroundColor: CupertinoColors.tertiarySystemFill,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Quaternary System Fill',
-          backgroungColor: CupertinoColors.quaternarySystemFill,
+          backgroundColor: CupertinoColors.quaternarySystemFill,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -194,17 +192,17 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'System Grouped Background',
-          backgroungColor: CupertinoColors.systemGroupedBackground,
+          backgroundColor: CupertinoColors.systemGroupedBackground,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Secondary System Grouped Background',
-          backgroungColor: CupertinoColors.secondarySystemGroupedBackground,
+          backgroundColor: CupertinoColors.secondarySystemGroupedBackground,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Tertiary System Grouped Background',
-          backgroungColor: CupertinoColors.tertiarySystemGroupedBackground,
+          backgroundColor: CupertinoColors.tertiarySystemGroupedBackground,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -216,22 +214,22 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'Active Blue',
-          backgroungColor: CupertinoColors.activeBlue,
+          backgroundColor: CupertinoColors.activeBlue,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Active Green',
-          backgroungColor: CupertinoColors.activeGreen,
+          backgroundColor: CupertinoColors.activeGreen,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Active Orange',
-          backgroungColor: CupertinoColors.activeOrange,
+          backgroundColor: CupertinoColors.activeOrange,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'Inactive Gray',
-          backgroungColor: CupertinoColors.inactiveGray,
+          backgroundColor: CupertinoColors.inactiveGray,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -243,62 +241,62 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'System Red',
-          backgroungColor: CupertinoColors.systemRed,
+          backgroundColor: CupertinoColors.systemRed,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Orange',
-          backgroungColor: CupertinoColors.systemOrange,
+          backgroundColor: CupertinoColors.systemOrange,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Yellow',
-          backgroungColor: CupertinoColors.systemYellow,
+          backgroundColor: CupertinoColors.systemYellow,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Green',
-          backgroungColor: CupertinoColors.systemGreen,
+          backgroundColor: CupertinoColors.systemGreen,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Mint',
-          backgroungColor: CupertinoColors.systemMint,
+          backgroundColor: CupertinoColors.systemMint,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Teal',
-          backgroungColor: CupertinoColors.systemTeal,
+          backgroundColor: CupertinoColors.systemTeal,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Cyan',
-          backgroungColor: CupertinoColors.systemCyan,
+          backgroundColor: CupertinoColors.systemCyan,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Blue',
-          backgroungColor: CupertinoColors.systemBlue,
+          backgroundColor: CupertinoColors.systemBlue,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Indigo',
-          backgroungColor: CupertinoColors.systemIndigo,
+          backgroundColor: CupertinoColors.systemIndigo,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Purple',
-          backgroungColor: CupertinoColors.systemPurple,
+          backgroundColor: CupertinoColors.systemPurple,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Pink',
-          backgroungColor: CupertinoColors.systemPink,
+          backgroundColor: CupertinoColors.systemPink,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Brown',
-          backgroungColor: CupertinoColors.systemBrown,
+          backgroundColor: CupertinoColors.systemBrown,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -310,32 +308,32 @@ class _ColorPageState extends State<ColorPage> {
       children: [
         _colorContainer(
           title: 'System Grey',
-          backgroungColor: CupertinoColors.systemGrey,
+          backgroundColor: CupertinoColors.systemGrey,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Grey2',
-          backgroungColor: CupertinoColors.systemGrey2,
+          backgroundColor: CupertinoColors.systemGrey2,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Grey3',
-          backgroungColor: CupertinoColors.systemGrey3,
+          backgroundColor: CupertinoColors.systemGrey3,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Grey4',
-          backgroungColor: CupertinoColors.systemGrey4,
+          backgroundColor: CupertinoColors.systemGrey4,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Grey5',
-          backgroungColor: CupertinoColors.systemGrey5,
+          backgroundColor: CupertinoColors.systemGrey5,
           textColor: CupertinoColors.label,
         ),
         _colorContainer(
           title: 'System Grey6',
-          backgroungColor: CupertinoColors.systemGrey6,
+          backgroundColor: CupertinoColors.systemGrey6,
           textColor: CupertinoColors.label,
         ),
       ],
@@ -344,12 +342,12 @@ class _ColorPageState extends State<ColorPage> {
 
   Widget _colorContainer(
       {required String title,
-      required Color backgroungColor,
+      required Color backgroundColor,
       required Color textColor}) {
     return Container(
-      color: backgroungColor,
+      color: backgroundColor,
       alignment: Alignment.centerLeft,
-      padding: StyleConsts.padding16,
+      padding: const EdgeInsets.all(16),
       child: Text(
         title,
         style: TextStyle(color: textColor),
@@ -359,7 +357,7 @@ class _ColorPageState extends State<ColorPage> {
 
   Widget _section({required List<Widget> children}) {
     return ClipRRect(
-      borderRadius: StyleConsts.borderRadiusCircle8,
+      borderRadius: BorderRadius.circular(8),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: children,

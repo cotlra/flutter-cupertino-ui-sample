@@ -26,7 +26,7 @@ class _ListSectionPageState extends State<ListSectionPage> {
                 children: List.generate(
                     5,
                     (index) => CupertinoListTile(
-                          title: Text('Item$index'),
+                          title: Text('Item $index'),
                         )),
               )
             ],

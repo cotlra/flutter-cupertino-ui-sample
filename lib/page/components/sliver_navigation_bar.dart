@@ -25,7 +25,7 @@ class _SliverNavigationBarPageState extends State<SliverNavigationBarPage> {
                 delegate: SliverChildBuilderDelegate(
                   (BuildContext context, int index) {
                     return CupertinoListTile(
-                      title: Text('Item$index'),
+                      title: Text('Item $index'),
                     );
                   },
                   childCount: 50,

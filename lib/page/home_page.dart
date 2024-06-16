@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: const CupertinoNavigationBar(
-        middle: Text('Demo'),
+        middle: Text('Cupertino UI Sample'),
       ),
       child: SafeArea(
         child: ListView.builder(

@@ -1,8 +1,8 @@
 import 'package:cupertino_ui_sample/page/components/action_sheet_page.dart';
 import 'package:cupertino_ui_sample/page/components/activity_indicator_page.dart';
 import 'package:cupertino_ui_sample/page/components/alert_dialog_page.dart';
-import 'package:cupertino_ui_sample/page/components/button_filled_page.dart';
 import 'package:cupertino_ui_sample/page/components/button_page.dart';
+import 'package:cupertino_ui_sample/page/components/checkbox_page.dart';
 import 'package:cupertino_ui_sample/page/components/context_menu_page.dart';
 import 'package:cupertino_ui_sample/page/components/date_picker.dart';
 import 'package:cupertino_ui_sample/page/components/list_section_page.dart';
@@ -39,19 +39,19 @@ class PageInfo {
 class PageList {
   final list = [
     PageInfo(
-      pageName: 'Action Sheet',
+      pageName: 'ActionSheet',
       pageRoute: '/actionSheet',
-      page: const ActionSheetPage(title: 'Action Sheet'),
+      page: const ActionSheetPage(title: 'ActionSheet'),
     ),
     PageInfo(
-      pageName: 'Activity Indicator',
+      pageName: 'ActivityIndicator',
       pageRoute: '/activityIndicator',
-      page: const ActivityIndicatorPage(title: 'Activity Indicator'),
+      page: const ActivityIndicatorPage(title: 'ActivityIndicator'),
     ),
     PageInfo(
-      pageName: 'Alert Dialog',
+      pageName: 'AlertDialog',
       pageRoute: '/alertDialog',
-      page: const AlertDialogPage(title: 'Alert Dialog'),
+      page: const AlertDialogPage(title: 'AlertDialog'),
     ),
     PageInfo(
       pageName: 'Button',
@@ -59,24 +59,19 @@ class PageList {
       page: const ButtonPage(title: 'Button'),
     ),
     PageInfo(
-      pageName: 'Button（Filled）',
-      pageRoute: '/buttonFilled',
-      page: const ButtonFilledPage(title: 'Button（Filled）'),
-    ),
-    PageInfo(
       pageName: 'Color',
       pageRoute: '/color',
       page: const ColorPage(title: 'Color'),
     ),
     PageInfo(
-      pageName: 'Context Menu',
+      pageName: 'ContextMenu',
       pageRoute: '/contextMenu',
-      page: const ContextMenuPage(title: 'Context Menu'),
+      page: const ContextMenuPage(title: 'ContextMenu'),
     ),
     PageInfo(
-      pageName: 'Date Picker',
+      pageName: 'DatePicker',
       pageRoute: '/datePicker',
-      page: const DatePickerPage(title: 'Date Picker'),
+      page: const DatePickerPage(title: 'DatePicker'),
     ),
     PageInfo(
       pageName: 'Icon',
@@ -84,19 +79,19 @@ class PageList {
       page: const IconPage(title: 'Icon'),
     ),
     PageInfo(
-      pageName: 'List Section',
+      pageName: 'ListSection',
       pageRoute: '/listSection',
-      page: const ListSectionPage(title: 'List Section'),
+      page: const ListSectionPage(title: 'ListSection'),
     ),
     PageInfo(
-      pageName: 'List Tile',
+      pageName: 'ListTile',
       pageRoute: '/listTile',
-      page: const ListTilePage(title: 'List Tile'),
+      page: const ListTilePage(title: 'ListTile'),
     ),
     PageInfo(
-      pageName: 'Navigation Bar',
+      pageName: 'NavigationBar',
       pageRoute: '/navigationBar',
-      page: const NavigationBarPage(title: 'Navigation Bar'),
+      page: const NavigationBarPage(title: 'NavigationBar'),
     ),
     PageInfo(
       pageName: 'Picker',
@@ -104,19 +99,19 @@ class PageList {
       page: const PickerPage(title: 'Picker'),
     ),
     PageInfo(
-      pageName: 'Scroll Bar',
+      pageName: 'ScrollBar',
       pageRoute: '/scrollBar',
-      page: const ScrollBarPage(title: 'Scroll Bar'),
+      page: const ScrollBarPage(title: 'ScrollBar'),
     ),
     PageInfo(
-      pageName: 'Search Text Field',
+      pageName: 'SearchTextField',
       pageRoute: '/searchTextField',
-      page: const SearchTextFieldPage(title: 'Search Text Field'),
+      page: const SearchTextFieldPage(title: 'SearchTextField'),
     ),
     PageInfo(
-      pageName: 'Segmented Control',
+      pageName: 'SegmentedControl',
       pageRoute: '/segmentedControl',
-      page: const SegmentedControlPage(title: 'Segmented Control'),
+      page: const SegmentedControlPage(title: 'SegmentedControl'),
     ),
     PageInfo(
       pageName: 'Slider',
@@ -124,15 +119,14 @@ class PageList {
       page: const SliderPage(title: 'Slider'),
     ),
     PageInfo(
-      pageName: 'Sliding Segmented Control',
+      pageName: 'SlidingSegmentedControl',
       pageRoute: '/slidingSegmentedControl',
-      page:
-          const SlidingSegmentedControlPage(title: 'Sliding Segmented Control'),
+      page: const SlidingSegmentedControlPage(title: 'SlidingSegmentedControl'),
     ),
     PageInfo(
-      pageName: 'Sliver Navigation Bar',
+      pageName: 'SliverNavigationBar',
       pageRoute: '/sliverNavigationBarPage',
-      page: const SliverNavigationBarPage(title: 'Sliver Navigation Bar'),
+      page: const SliverNavigationBarPage(title: 'SliverNavigationBar'),
     ),
     PageInfo(
       pageName: 'Switch',
@@ -140,21 +134,30 @@ class PageList {
       page: const SwitchPage(title: 'Switch'),
     ),
     PageInfo(
-      pageName: 'Tab Bar',
+      pageName: 'TabBar',
       pageRoute: '/tabBar',
-      page: const TabBarPage(title: 'Tab Bar'),
+      page: const TabBarPage(title: 'TabBar'),
     ),
     PageInfo(
-      pageName: 'Text Field',
+      pageName: 'TextField',
       pageRoute: '/textField',
-      page: const TextFieldPage(title: 'Text Field'),
+      page: const TextFieldPage(title: 'TextField'),
     ),
     PageInfo(
-      pageName: 'Time Picker',
+      pageName: 'TimePicker',
       pageRoute: '/timePicker',
-      page: const TimePickerPage(title: 'Time Picker'),
+      page: const TimePickerPage(title: 'TimePicker'),
+    ),
+    PageInfo(
+      pageName: 'Checkbox',
+      pageRoute: '/checkbox',
+      page: const CheckboxPage(title: 'Checkbox'),
     ),
   ];
+
+  PageList() {
+    list.sort((a, b) => a.pageName.compareTo(b.pageName));
+  }
 
   Map<String, Widget Function(BuildContext)> getRootMap() {
     Map<String, Widget Function(BuildContext)> map = {};

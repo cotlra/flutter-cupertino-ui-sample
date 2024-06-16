@@ -12,13 +12,13 @@ class _TabBarPageState extends State<TabBarPage> {
   var _selectedIndex = 0;
   final _contentList = const [
     Center(
-      child: Text('ホーム画面'),
+      child: Text('Home'),
     ),
     Center(
-      child: Text('検索画面'),
+      child: Text('Search'),
     ),
     Center(
-      child: Text('設定'),
+      child: Text('Settings'),
     ),
   ];
 
@@ -42,11 +42,11 @@ class _TabBarPageState extends State<TabBarPage> {
       tabBar: CupertinoTabBar(
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.home), label: 'ホーム'),
+              icon: Icon(CupertinoIcons.home), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.search), label: '検索'),
+              icon: Icon(CupertinoIcons.search), label: 'Search'),
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.settings), label: '設定'),
+              icon: Icon(CupertinoIcons.settings), label: 'Settings'),
         ],
         currentIndex: _selectedIndex,
         onTap: (index) {

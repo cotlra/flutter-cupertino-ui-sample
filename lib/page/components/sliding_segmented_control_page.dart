@@ -12,7 +12,7 @@ class SlidingSegmentedControlPage extends StatefulWidget {
 
 class _SlidingSegmentedControlPageState
     extends State<SlidingSegmentedControlPage> {
-  String? _value = 'Item1';
+  String? _value = 'Item 1';
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -29,9 +29,9 @@ class _SlidingSegmentedControlPageState
             },
             groupValue: _value,
             children: const {
-              'Item1': Text('Item1'),
-              'Item2': Text('Item2'),
-              'Item3': Text('Item3'),
+              'Item 1': Text('Item 1'),
+              'Item 2': Text('Item 2'),
+              'Item 3': Text('Item 3'),
             },
           ),
         ),

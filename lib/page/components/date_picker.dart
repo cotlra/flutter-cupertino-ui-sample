@@ -11,7 +11,7 @@ class DatePickerPage extends StatefulWidget {
 }
 
 class _DatePickerPageState extends State<DatePickerPage> {
-  DateTime? _value = null;
+  DateTime _value = DateTime.now();
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -28,7 +28,7 @@ class _DatePickerPageState extends State<DatePickerPage> {
               onPressed: () {
                 DisplayCupertinoPicker.showPicker(context, _timePicker());
               },
-              child: const Text('Cupertino Date Picker'),
+              child: const Text('Show CupertinoDatePicker'),
             ),
           ],
         )),

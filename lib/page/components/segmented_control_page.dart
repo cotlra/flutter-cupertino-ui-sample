@@ -1,4 +1,3 @@
-import 'package:cupertino_ui_sample/const/style_consts.dart';
 import 'package:flutter/cupertino.dart';
 
 class SegmentedControlPage extends StatefulWidget {
@@ -29,16 +28,16 @@ class _SegmentedControlPageState extends State<SegmentedControlPage> {
             groupValue: _value,
             children: const {
               'Item1': Padding(
-                padding: StyleConsts.padding8,
-                child: Text('Item1'),
+                padding: EdgeInsets.all(8),
+                child: Text('Item 1'),
               ),
               'Item2': Padding(
-                padding: StyleConsts.padding8,
-                child: Text('Item2'),
+                padding: EdgeInsets.all(8),
+                child: Text('Item 2'),
               ),
               'Item3': Padding(
-                padding: StyleConsts.padding8,
-                child: Text('Item3'),
+                padding: EdgeInsets.all(8),
+                child: Text('Item 3'),
               ),
             },
           ),

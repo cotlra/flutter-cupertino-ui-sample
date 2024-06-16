@@ -1,4 +1,3 @@
-import 'package:cupertino_ui_sample/const/style_consts.dart';
 import 'package:flutter/cupertino.dart';
 
 class SearchTextFieldPage extends StatefulWidget {
@@ -20,7 +19,7 @@ class _SearchTextFieldPageState extends State<SearchTextFieldPage> {
       ),
       child: SafeArea(
         child: Padding(
-          padding: StyleConsts.padding16,
+          padding: const EdgeInsets.all(16),
           child: Center(
             child: CupertinoSearchTextField(
               controller: _controller,

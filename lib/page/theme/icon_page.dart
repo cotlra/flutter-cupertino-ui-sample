@@ -1,5 +1,4 @@
 import 'package:cupertino_ui_sample/const/icon_list.dart';
-import 'package:cupertino_ui_sample/const/style_consts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,12 +25,12 @@ class _IconPageState extends State<IconPage> {
               children: IconList.map.entries
                   .map(
                     (e) => Padding(
-                      padding: StyleConsts.padding8,
+                      padding: const EdgeInsets.all(8),
                       child: Tooltip(
                         message: e.key,
                         child: Icon(
                           e.value,
-                          size: StyleConsts.value32,
+                          size: 32,
                         ),
                       ),
                     ),

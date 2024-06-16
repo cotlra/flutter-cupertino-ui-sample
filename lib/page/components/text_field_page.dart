@@ -1,4 +1,3 @@
-import 'package:cupertino_ui_sample/const/style_consts.dart';
 import 'package:flutter/cupertino.dart';
 
 class TextFieldPage extends StatefulWidget {
@@ -20,7 +19,7 @@ class _TextFieldPageState extends State<TextFieldPage> {
       ),
       child: SafeArea(
         child: Padding(
-          padding: StyleConsts.padding16,
+          padding: const EdgeInsets.all(16),
           child: Center(
             child: CupertinoTextField(
               controller: _controller,
